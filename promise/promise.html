@@ -10,36 +10,38 @@
     <h1>hello world</h1>
 </body>
 <script>
-    // const promiseExp = () => {
-    //     return new Promise((resolve, reject) => {
-    //         // resolve({name : 'Long', age : 25});
-    //         reject('something wrongs')
+    const promiseExp = () => {
+        return new Promise((resolve, reject) => {
+            // resolve({name : 'Long', age : 25});
+            reject('something wrongs')
 
-    //     })
-    // }
-    // promiseExp()
-    //     .then(data => {
-    //     console.log(data)
-    //     })
-    //     .catch(data => {
-    //         console.log(data)
-    //     })
+        })
+    }
+    promiseExp()
+        .then(data => {
+        console.log(data)
+        })
+        .catch(data => {
+            console.log(data)
+        })
 
-    // fetch('https://jsonplaceholder.typicode.com/todos/1')
-    //     .then(Response => {
-    //         return Response.json()
-    //     })
-    //     .then(data => {
-    //         console.log('>>> check fetch data', data)
-    //     })
-    // const getNewTodo = async (id) => {
-    //     let respnse = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
-    //     let data = await respnse.json();
-    //     return data;
-    // }
-    // getNewTodo(2).then(data => {
-    //     console.log('>>> check get data', data)
-    // })
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(Response => {
+            return Response.json()
+        })
+        .then(data => {
+            console.log('>>> check fetch data', data)
+        })
+    const getNewTodo = async (id) => {
+        let respnse = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+        let data = await respnse.json();
+        return data;
+    }
+    getNewTodo(2).then(data => {
+        console.log('>>> check get data', data)
+    })
+
+
     let arr1 = [1, 2, 3, 4, 5];
     let arr2 = [0,...arr1,6];
     let arr3 = {

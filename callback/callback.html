@@ -17,12 +17,27 @@
     //     console.log(value);
     // }
     // myFunction(callBack);
-   let myFunction = (param) => {
-        param('longkun')
+//    let myFunction = (param) => {
+//         param('longkun')
+//     }
+//     let callBack = (value) => {
+//         console.log(value);
+//     }
+//     myFunction(callBack);
+
+    var courses = [
+        'javascript',
+        'PHP',
+        'Python'
+    ]
+    Array.prototype.map2 = function(callBack) {
+        var arrLength = this.length;
+        for (let i = 0; i <arrLength; i++) {
+            callBack(this[i], i);
+        }
     }
-    let callBack = (value) => {
-        console.log(value);
-    }
-    myFunction(callBack);
+    courses.map2(function(course,index) {
+        console.log(index,course);
+    })
 </script>
 </html>
